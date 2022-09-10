@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)https://forecast.io/embed/#&lat=58.396096&lon=15.648996&name=Oxelgatan%207&lang=sv&units=si&color=#00aaff -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="refresh" content="900">
+  <title>Forecast Embed</title>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="/embed/flashcanvas.js"></script>
+  <![endif]-->
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      height: 245px;
+      overflow: hidden;
+    }
+
+    .fe_container {
+      width: 100%;
+      font-weight: 300;
+      min-width: 500px;
+      max-width: 1000px;
+      color: #333;
+      margin: 0 auto;
+      height: 245px;
+    }
+    body.hide_daily .fe_container { min-width: 200px;}
+
+    .fe_container a { color: #333; }
+
+    .fe_container .fe_title {
+      position: relative;
+      height: 32px;
+      border-bottom: 2px solid #444;
+    }
+
+    .fe_container .fe_title .fe_location {
+      position: absolute;
+      left: 10px;
+      bottom: 6px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    body.hide_daily .fe_container .fe_title .fe_location { font-size: 14px; bottom: 8px; }
+    body.hide_daily .fe_container .fe_title .pre { display: none; }
+
+    .fe_container .fe_title .fe_forecast_link {
+      position: absolute;
+      right: 10px;
+      bottom: 8px;
+      font-size: 14px;
+    }
+
+    .fe_container .fe_forecast {
+      margin-top: 14px;
+    }
+
+    .fe_container .fe_currently {
+      float: left;
+      position: relative;
+      width: 35%;
+      height: 100%;
+      font-size: 14px;
+      text-align: center;
+      padding-top: 5px;
+    }
+    body.hide_daily .fe_container .fe_currently { width: 100%; }
+
+    .fe_container #fe_current_icon {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+    }
+
+    .fe_container .fe_currently .fe_temp {
+      display: inline-block;
+      position: relative;
+      top: -15px;
+      margin-left: 5px;
+      font-size: 50px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 0.65em;
+    }
+
+    .fe_container .fe_currently .fe_temp .fe_dir {
+      display: block;
+      position: relative;
+      left: -5px;
+      display: block;
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    .fe_container .fe_currently .fe_summary {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .fe_container .fe_currently .fe_wind {
+      font-size: 14px;
+    }
+
+    .fe_container .fe_daily {
+      float: left;
+      display: table;
+      width: 65%;
+      height: 100%;
+      font-size: 14px;
+      text-align: center;
+    }
+    body.hide_daily .fe_container .fe_daily { display: none; }
+
+    .fe_container .fe_daily .fe_day {
+      display: table-cell;
+      text-align: center;
+    }
+
+    .fe_container .fe_daily .fe_day .fe_label {
+      font-weight: bold;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .fe_container .fe_daily .fe_icon {
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      margin-top: 2px;
+    }
+
+    .fe_container .fe_daily .fe_day .fe_temp_bar {
+      position: relative;
+      width: 20px;
+      margin: 18px auto 0;
+      font-size: 12px;
+      border-radius: 200px;
+    }
+
+    .fe_container .fe_daily .fe_day .fe_high_temp {
+      position: absolute;
+      width: 100%;
+      top: -16px;
+      left: 2px;
+    }
+
+    .fe_container .fe_daily .fe_day .fe_low_temp {
+      position: absolute;
+      width: 100%;
+      bottom: -16px;
+      left: 2px;
+    }
+
+    .fe_alert {
+      position: absolute;
+      top: 205px;
+      text-align: center;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .fe_alert a {
+      text-decoration: underline;
+      text-overflow: ellipsis;
+      font-style: italic;
+      font-weight: bold;
+      text-decoration: underline;
+      color: #A00;
+    }
+
+    .fe_alert a .fe_icon {
+      font-size: 20px;
+    }
+
+    .fe_loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      line-height: 240px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    #fe_loading_icon {
+      position: relative;
+      top: 15px;
+      left: -5px;
+    }
+  </style>
+</head>
+
+
+
+
+<body>
+  <div id="forecast_embed" class="fe_container">
+    <div class="fe_title" style="display: block;"> <span class="fe_location"> <span><span class="pre"></span>{{title}}</span> </span> <span class="fe_forecast_link"> <span class="pre">Made by boanjo </span><a
+          target="_blank" href={{radar_url}}>Radar (RainViewer)</a> </span> </div>
+    <div class="fe_forecast">
+      <div class="fe_currently"> <canvas id="fe_current_icon" width="160" height="160"
+          style="width:80px; height:80px"></canvas>
+        <div class="fe_temp">{{ fe_current_temp | safe}}° <span class="fe_dir">{{ fe_temp_trend | safe}}</span></div>
+        <div class="fe_summary">{{ fe_description | safe}}</div>
+        <div class="fe_wind">Wind: {{ fe_wind_speed | safe}} m/s ({{ fe_wind_dir | safe}})</div>
+      </div>
+      <div class="fe_daily">
+
+
+        {%for i in range(0, 8)%}
+
+        <div class="fe_day"> <span class="fe_label">{{ days[i]['day_of_week'] }}</span> <canvas class="fe_icon" width="52" height="52"
+          style="width:26px; height:26px" id="fe_day_icon{{i}}"></canvas>
+        <div class="fe_temp_bar" style="height: {{ days[i]['height'] }}px; top: {{ days[i]['top'] }}px; background-color: rgb(0, 170, 255);"> <span
+            class="fe_high_temp">{{days[i]['max_temp']}}°</span> <span class="fe_low_temp">{{days[i]['min_temp']}}°</span> </div>
+         </div>
+        {%endfor%}
+
+
+
+      </div>
+      <div style="clear:left"></div>
+    </div>
+    <div class="fe_alert" style="display:none"></div>
+    <div class="fe_loading" style="display: none;"> <canvas id="fe_loading_icon" width="100" height="100"
+        style="width:50px; height:50px"></canvas> Loading... </div>
+  </div>
+
+  </script><script src="/static/skycons.js"></script>
+
+  <script>
+  window.onload = function() {
+
+      var skycons = new Skycons({"monochrome": true});
+
+      skycons.add("fe_current_icon", {{ fe_current_icon | safe}});
+
+      {%for i in range(0, 8)%}
+      skycons.add("fe_day_icon"+{{i}}, {{days[i]['icon']}});
+      {%endfor%}
+
+      skycons.play();
+  }    
+  </script>
+
+
+</body></html>

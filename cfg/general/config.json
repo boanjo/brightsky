@@ -1,0 +1,6 @@
+{
+	"redis": {
+		"url": "boan.dyndns.org",
+		"port": 6379
+	}
+}

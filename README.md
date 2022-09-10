@@ -1,2 +1,1 @@
-# brightsky
-Brightsky is a remake of an old widget developed by The Dark Sky Company but powered by other forecast (weatherbit) API
+docker run --name redis -v /home/epkboan/repos/brightsky/data:/data -d redis redis-server --save 60 1 --loglevel warning

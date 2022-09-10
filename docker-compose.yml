@@ -1,0 +1,64 @@
+version: '3.3'
+
+services:
+  brightsky-web-app:
+    build:
+      context: ./web_app
+      dockerfile: Dockerfile
+    environment:
+      TZ: Europe/Stockholm
+    volumes:
+      - './cfg/general:/cfg'
+    ports:
+      - "9103:5000"
+    depends_on:
+      - redis
+    restart: always
+
+  oxelgatan7-forecast:
+    build:
+      context: ./forecast
+      dockerfile: Dockerfile
+    environment:
+      TZ: Europe/Stockholm
+    depends_on:
+      - redis
+    volumes:
+      - './cfg/oxelgatan7:/cfg'
+    restart: always
+
+  huarod-forecast:
+    build:
+      context: ./forecast
+      dockerfile: Dockerfile
+    environment:
+      TZ: Europe/Stockholm
+    depends_on:
+      - redis
+    volumes:
+      - './cfg/huarod:/cfg'
+    restart: always
+
+  uranusvagen-forecast:
+    build:
+      context: ./forecast
+      dockerfile: Dockerfile
+    environment:
+      TZ: Europe/Stockholm
+    depends_on:
+      - redis
+    volumes:
+      - './cfg/uranusvagen:/cfg'
+    restart: always
+
+  redis:
+    image: redis
+    environment:
+      TZ: Europe/Stockholm
+    volumes:
+      - './data:/data'
+    ports:
+      - "6379:6379"
+    command: redis-server --save 60 1 --loglevel warning
+    restart: always
+

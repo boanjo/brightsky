@@ -1,0 +1,17 @@
+{
+	"redis": {
+		"url": "boan.dyndns.org",
+		"port": 6379,
+		"key": "huarod"
+	},
+	"weatherbit": {
+		"key": "7b9bb5cb236f467f9ec6c2d933b5d443",
+		"user": "a.boan.j"
+	},
+	"general": {
+		"title": "Weather for Huarod",
+		"radar_url": "https://www.rainviewer.com/map.html?loc=55.8052,13.9242,9&oFa=0&oC=0&oU=0&oCS=1&oF=0&oAP=1&c=1&o=83&lm=1&layer=radar&sm=1&sn=1&undefined=1",
+		"lat": "55.8052",
+		"lon": "13.9242"
+	}
+}

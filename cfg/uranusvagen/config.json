@@ -1,0 +1,17 @@
+{
+	"redis": {
+		"url": "boan.dyndns.org",
+		"port": 6379,
+		"key": "uranusvagen"
+	},
+	"weatherbit": {
+		"key": "27ff7b0f785243c68cb9218bb07cb547",
+		"user": "epkboan.txrx"
+	},
+	"general": {
+		"title": "Weather for Uranusvagen 10",
+		"radar_url": "https://www.rainviewer.com/map.html?loc=55.9971,14.06946,9&oFa=0&oC=0&oU=0&oCS=1&oF=0&oAP=1&c=1&o=83&lm=1&layer=radar&sm=1&sn=1&undefined=1",
+		"lat": "55.997155",
+		"lon": "14.0694613"
+	}
+}

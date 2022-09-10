@@ -1,0 +1,30 @@
+{
+    "temp_out": {
+	"header":"",
+	"node_id":"37",
+	"child_id":"2",
+	"value":"-255.0",
+	"last_seen":""
+    },
+    "temp_in":{
+	"node_id":"38",
+	"child_id":"1",
+	"value":"-255.0",
+	"last_seen":""
+    },
+    "rain": {
+	"node_id":"37",
+	"child_id":"1",
+	"value":"0.0",
+	"last_seen":""
+    },
+    "wind": {
+	"node_id":"37",
+	"child_id":"0",
+	"value":"0.0",
+	"last_seen":""
+    },
+    "general": {
+	"title":"Oxelgatan 7"
+    }
+}
