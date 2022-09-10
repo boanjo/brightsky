@@ -1,6 +1,6 @@
 {
 	"redis": {
-		"url": "boan.dyndns.org",
+		"url": "someredisserver.dyndns.org",
 		"port": 6379,
 		"key": "uranusvagen"
 	},

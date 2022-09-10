@@ -1,1 +1,0 @@
-docker run --name redis -v /home/epkboan/repos/brightsky/data:/data -d redis redis-server --save 60 1 --loglevel warning
